@@ -1,0 +1,443 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Navbar */
+
+#logo {
+    width: 148px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px; 
+}
+
+nav, main, footer {
+    padding: 0 148px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%), url(assets/banner.png) center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 99vh;
+    padding-top: 25px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 30px;
+    padding: 0px;
+    font-weight: 500;
+}
+
+h1, h3 {
+    margin: 5px 0;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 900;
+    max-width: 588px;
+    color: white;
+    margin: 10px 0;
+    font-family: sans-serif;
+    letter-spacing: -1px;
+}
+
+.hero h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 5px 0;
+    font-family: sans-serif;
+}
+
+button {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border: 1px solid rgb(229, 9, 20);
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+#nav-button {
+    width: 80px;
+    height: 42px;
+    padding: 6px 18px;
+    cursor: pointer; 
+}
+
+#hero-button {
+    font-size: 18px;
+    padding: 14px 29px;
+    width: 176.05px;
+    height: 56px;
+    cursor: pointer;
+}
+
+#email {
+    width: 323.95px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 11px 15px;
+    background-color: rgba(0, 0, 0, 0.5);;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100px;
+    background: #000;
+    border-top: 4px solid #de0d20;
+    pointer-events: none;
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    background-image: radial-gradient(70% 30% at 50% 10%, rgba(64, 97, 231, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+} 
+
+/* Overlay over Background */
+.overlay {
+    z-index: 1;
+    height:100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(64, 97, 231, 0.15) 80%, rgba(0,0,0,0.1) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Trending Now Clips */
+.clip-img {
+    width: 180px;
+    height: 250px;
+    margin-bottom: -15px;
+    cursor: pointer;
+}
+
+span {
+    color:black;
+    font-size: 100px;
+    position: relative;
+    right: 18px;
+    bottom: 120px;
+    font-weight: 800;
+    -webkit-text-stroke: 2px white;
+}
+
+#trending-now {
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+
+}
+
+.next {
+    position: absolute;
+    align-items: center;
+    background: url(assets/arrow-right.svg) center center no-repeat;
+    background-color: grey;
+    border: #000;
+    height: 130px;
+    width: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    
+}
+
+/* More Reasons Cards*/
+.reasons-card {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96%);
+    width: 260px;
+    min-height: 280px;
+    border-radius: 16px;
+    padding: 24px;
+    padding-left: 16px;
+    padding-left: 16px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease;
+}
+
+.reasons-card:hover {
+    transform: translateY(-5px);
+}
+
+.reasons-section h2 {
+    font-size: 28px;
+    margin: 40px 0 20px 40px;
+}
+
+.reasons-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+#more-reasons-to-join {
+    display: flex;
+    gap: 24px;
+    padding: wrap;
+}
+
+.reasons-card p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #cfcfcf;
+}
+
+.card-img {
+    width: 60px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Image and Video Layout */
+.video-element {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tv-container {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-container img {
+    z-index: 1;
+}
+
+.tv-container video {
+    position: absolute;
+}
+
+/* FAQ Section */
+
+.faq-section {
+    margin-top: 70px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* FAQ Questions*/
+details {
+    background-color: #2d2d2d;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 20px 24px;
+    cursor: pointer; 
+} 
+
+/* FAQ icons*/
+summary {
+    list-style: none;
+    padding-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+summary::after {
+    content: url(assets/expand.svg);
+}
+
+/* FAQ Answers */
+details p {
+    font-size: 24px;
+    font-weight: 400;
+    align-items: center;
+    border-top: 2px solid black;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+} 
+
+/* FOOTER */
+footer {
+    font-family: sans-serif;
+}
+/* Main Footer,Footer Links and Get Started Bottom */
+.started-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.get-started #email {
+    width: 643px;
+}
+
+.footer {
+    margin-top: 85px;
+    margin-bottom: 135px;
+}
+
+.footer-top p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.call {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 180px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 33px;
+}
+
+.footer-link {
+    list-style-type: none;
+    padding-left: 0;
+    padding-left: 6px;
+}
+
+/* Language and Translation box */
+#languages {
+    appearance: none;
+    color: white;
+    background: none;
+    background: url(assets/more.svg) no-repeat right;
+    font-size: 16px;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+}
+
+.language {
+    padding: 6px 10px 6px 10px;
+    background: #0f0f0f;
+    border: 1px solid #5f5e5e;
+    border-radius: 4px;
+    align-items: center;
+    width: 100px;
+    height: 17.6px;
+    display: flex;
+    justify-content: left;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.translate-icon {
+    margin-right: 5px;
+    height: 18px;
+}
+
+option {
+    background-color: #0f0f0f;
+}
+
+/* Footer Bottom */
+.footer-p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 10px;
+    margin-left: 0;
+}
+
+.protected {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 3px;
+    margin-left: 0;
+}
+
+.learn {
+    color: #448ef4;
+}
+
+/* Mobile-first overrides */
+h1 { font-size: 28px; width: auto; text-align: center; }
+h3 { font-size: 14px; padding-right: 0; margin: 6px 0; }
+
+/* Small screens */
+@media (max-width: 600px) {
+  nav, main, footer { padding: 0 20px; }
+  .header { padding: 0 12px; }
+  nav { height: auto; background-position: center top; }
+  .hero { margin-bottom: 80px; }
+  #trending-now { gap: 12px; overflow-x: auto; }
+  .clip-img { width: 140px; height: 200px; }
+  .reasons-card { width: 100%; height: auto; align-items: center; padding: 16px; }
+  .reasons-card h3 { padding-right: 0; text-align: center; }
+  .footer-links { gap: 30px; flex-wrap: wrap; }
+}
+
+@media (max-width: 768px) {
+
+    #more-reasons-to-join {
+        justify-content: center;
+    }
+
+    .reasons-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+
+/* Medium screens / tablets */
+@media (max-width: 900px) {
+  nav, main, footer { padding: 0 40px; }
+  h1 { font-size: 36px; width: auto; }
+  h3 { font-size: 15px; }
+  .reasons-card { width: 45%; }
+  #more-reasons-to-join { flex-wrap: wrap; gap: 12px; }
+  nav::after { bottom: -20px; height: 80px; }
+}
